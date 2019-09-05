@@ -89,15 +89,17 @@ function followerCard(data){
   userUser.classList.add('username');
 
   //create content
-  newImage.src = `${data.avatar_url}`;
+  newImage.src = data.avatar_url;
   title.textContent = `${data.name}`;
   userUser.textContent = `${data.login}`;
-  userLocation.textContent = `Location: ${data.location}`;
+  userProfile.textContent = "Profile: ";
   webAddress.href = `${data.html_url}`;
+  webAddress.textContent = `${data.html_url}`
+  userLocation.textContent = `Location: ${data.location}`;
   userFollower.textContent = `Followers: ${data.followers}`;
   userFollowing.textContent = `Following: ${data.following}`;
   userBio.textContent = `Bio: ${data.bio}`;
-  userProfile.textContent = "Profile:";
+
 
   //add structure
   newCard.appendChild(newImage);
